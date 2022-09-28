@@ -2,6 +2,8 @@
 
 Takes the output from `git log --name-only --oneline` (list of commits) and organizes the output by file. Then it styles the output for GitHub, optionally leveraging [`<details>` `<summary>`](https://gist.github.com/scmx/eca72d44afee0113ceb0349dd54a84a2) for expandable content. Works best with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
 
+This is like a bad [gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens).
+
 ## Example
 
 Command:
