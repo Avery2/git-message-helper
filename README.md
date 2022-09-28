@@ -4,13 +4,13 @@ Takes the output from `git log --name-only --oneline` (list of commits) and orga
 
 ## Example
 
-### Command
+Command:
 
 ```
 rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt
 ```
 
-### `log.txt`
+`log.txt`:
 
 ```
 6c52f66 style: update prints
@@ -29,7 +29,7 @@ organize.py
 organize.py
 ```
 
-### `output.txt`
+`output.txt`:
 
 ```
 <details><summary><code>organize.py</code></summary>
@@ -60,7 +60,7 @@ organize.py
 </details>
 ```
 
-### Output for GitHub
+Output in GitHub:
 
 <details><summary><code>organize.py</code></summary>
 
