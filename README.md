@@ -4,7 +4,7 @@
 
 ### Command
 
-`rm output.txt; git log --name-only --oneline -n 10 >> python3 organize.py >> output.txt`
+`rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt`
 
 ### `log.txt`
 
