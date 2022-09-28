@@ -6,7 +6,7 @@ This is like a bad [gitlens](https://marketplace.visualstudio.com/items?itemName
 
 ## Example
 
-Command:
+Command to take the last `n=10` commits:
 
 ```
 rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt
