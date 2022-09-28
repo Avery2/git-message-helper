@@ -27,7 +27,8 @@ for line in lines:
 
 filenames = set(filenames)
 # print(*grouped_by_commit, sep="\n")
-# print(filenames)
+# print(f"{filenames=}")
+# print(f"{grouped_by_commit=}")
 
 grouped_by_filename = {}
 
