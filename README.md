@@ -6,7 +6,7 @@
 
 `rm output.txt; git log --name-only --oneline -n 10 >> python3 organize.py >> output.txt`
 
-### `output.txt`
+### `log.txt`
 
 ```
 6c52f66 style: update prints
