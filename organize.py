@@ -41,7 +41,10 @@ for commit, files in grouped_by_commit:
 
 # printable version
 
-for filename, commits in grouped_by_filename.items():
-    print(f"- {filename}")
-    for commit in commits:
-        print(f"\t- {commit}")
+def printableVersion(grouping):
+    for filename, commits in grouping.items():
+        print(f"- {filename}")
+        for commit in commits:
+            print(f"\t- {commit}")
+
+printableVersion(grouped_by_filename)
