@@ -44,6 +44,10 @@ for commit, files in grouped_by_commit:
 def styleAsCode(s):
     return f"<code>{s}</code>"
 
+def strip_amp(s):
+    regex = r"AMP-\d{5}"
+    return re.sub(regex, '', s)
+
 def printableVersion(grouping, use_detail=True, file_path=False):
     for filename, commits in grouping.items():
         if not file_path:
@@ -57,6 +61,7 @@ def printableVersion(grouping, use_detail=True, file_path=False):
             print(f"- {filename}")
         for commit in commits:
             _s = '' if use_detail else '\t'
+            commit = strip_amp(commit)
             print(f"{_s}- {commit}")
         if use_detail:
             print("\n</details>")
