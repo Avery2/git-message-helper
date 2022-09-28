@@ -41,10 +41,16 @@ for commit, files in grouped_by_commit:
 
 # printable version
 
+def styleAsCode(s):
+    return f"<code>{s}</code>"
+
 def printableVersion(grouping, use_detail=True, file_path=False):
     for filename, commits in grouping.items():
         if not file_path:
             filename = filename.split("/")[-1]
+
+        filename = styleAsCode(filename)
+
         if use_detail:
             print(f"<details><summary>{filename}</summary>\n")
         else:
