@@ -7,7 +7,7 @@ with open(my_filename) as f:
     lines = f.readlines()
 
 # go through lines, identify commit message vs file
-commit_regex = r"^\w{10} "
+commit_regex = r"^\w{7,10} "
 # I want a list of tuples
     # tuples will be (commit line, list of file paths)
 
