@@ -40,15 +40,19 @@ def strip_amp(s):
     regex = r"AMP-\d{5}"
     return re.sub(regex, '', s)
 
-def printableVersion(grouping, use_detail=True, file_path=False):
-    for filename, commits in grouping.items():
+def printableVersion(grouping, use_detail=True, file_path=False, showCommitNum=True):
+    for filename, commits in grouping:
         if not file_path:
             filename = filename.split("/")[-1]
 
         filename = styleAsCode(filename)
 
+        commit_num_message = ''
+        if showCommitNum:
+            commit_num_message = f' with {styleAsCode(len(commits))} commits'
+
         if use_detail:
-            print(f"<details><summary>{filename}</summary>\n")
+            print(f"<details><summary>{filename}{commit_num_message}</summary>\n")
         else:
             print(f"- {filename}")
         for commit in commits:
@@ -58,4 +62,4 @@ def printableVersion(grouping, use_detail=True, file_path=False):
         if use_detail:
             print("\n</details>")
 
-printableVersion(grouped_by_filename)
+printableVersion(sorted(grouped_by_filename.items(), key=lambda x: -len(x[1])))
