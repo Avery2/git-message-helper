@@ -12,6 +12,12 @@ Command to take the last `n=10` commits:
 rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt
 ```
 
+For me: 
+
+```
+rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 /Users/avery.chan/Desktop/organize_pr/organize.py >> output.txt; cat output.txt; rm log.txt; rm output.txt;
+```
+
 `log.txt`:
 
 ```
