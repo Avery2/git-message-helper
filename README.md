@@ -1,12 +1,24 @@
 # git-message-helper
 
+Takes the output from `git log --name-only --oneline` (list of commits) and organizes the output by file. Then it styles the output for GitHub, optionally leveraging [`<details>` `<summary>`](https://gist.github.com/scmx/eca72d44afee0113ceb0349dd54a84a2) for expandable content. Works best with [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+This is like a bad [gitlens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens).
+
 ## Example
 
-### Command
+Command to take the last `n=10` commits:
 
-`rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt`
+```
+rm output.txt; rm log.txt; git log --name-only --oneline -n 10 >> log.txt; python3 organize.py >> output.txt
+```
 
-### `log.txt`
+For me, in other directories: 
+
+```
+git log --name-only --oneline -n 10 >> log.txt; python3 /Users/avery.chan/Desktop/organize_pr/organize.py >> output.txt; cat output.txt; rm log.txt; rm output.txt;
+```
+
+`log.txt`:
 
 ```
 6c52f66 style: update prints
@@ -25,7 +37,7 @@ organize.py
 organize.py
 ```
 
-### `output.txt`
+`output.txt`:
 
 ```
 <details><summary><code>organize.py</code></summary>
@@ -56,7 +68,7 @@ organize.py
 </details>
 ```
 
-### Output for GitHub
+Output in GitHub:
 
 <details><summary><code>organize.py</code></summary>
 
