@@ -1,10 +1,8 @@
 
 import re
+import sys
 
-my_filename = 'log.txt'
-
-with open(my_filename) as f:
-    lines = f.readlines()
+lines = [line for line in sys.stdin]
 
 # go through lines, identify commit message vs file
 commit_regex = r"^\w{7,10} "
