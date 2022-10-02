@@ -16,6 +16,8 @@ For me, in other directories:
 git log --name-only --oneline -n 10 | python3 /Users/avery.chan/Desktop/organize_pr/organize.py
 ```
 
+There are also optional flags in `organize.py` > `def printableVersion` that you can edit by editing the script locally.
+
 ## Example
 
 ### Command: 
