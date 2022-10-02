@@ -108,3 +108,8 @@ git log --name-only --oneline -n 24 | python3 /Users/avery.chan/Desktop/organize
 - 1ce8a08 initial commit 🚀
 
 </details>
+
+The commit hashes will be styled in comments: 
+
+<img width="931" alt="image" src="https://user-images.githubusercontent.com/53503018/193481457-3a8dc408-41d7-4c05-8847-72d80e476913.png">
+
