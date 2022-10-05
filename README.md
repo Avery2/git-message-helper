@@ -4,16 +4,16 @@ Takes the output from `git log --name-only --oneline` (list of commits) and orga
 
 ## How to run
 
-Command to take the last `n=10` commits:
+Command to take the last `n=10` commits, filtered for authors with `"avery"` in their name:
 
 ```
-git log --name-only --oneline -n 10 | python3 organize.py
+git log --name-only --oneline -n 10 --author="avery" | python3 organize.py
 ```
 
 For me, in other directories: 
 
 ```
-git log --name-only --oneline -n 10 | python3 /Users/avery.chan/Desktop/organize_pr/organize.py
+git log --name-only --oneline -n 10 --author="avery" | python3 /Users/avery.chan/Desktop/organize_pr/organize.py
 ```
 
 There are also optional flags in `organize.py` > `def printableVersion` that you can edit by editing the script locally.
